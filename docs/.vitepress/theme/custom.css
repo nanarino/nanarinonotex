@@ -1,22 +1,27 @@
 :root {
-  --c-brand: #a223d0;
-  --c-brand-light: #c44bf0;
+  --vp-c-brand: #c84de1;
+  --vp-c-brand-light: #c44bf0;
+  --vp-c-brand-lighter: #a223d0;
+  --vp-c-brand-dark: #9526da;
+  --vp-c-brand-darker: #8626da;
+}
 
-  /* 主色调 */
-  --color-main: var(--c-brand);
-  /* 底部栏色调 */
-  --color-border: #c84de1;
-  /* 引用字体色*/
-  --color-block: #a84de1;
-  /* 加粗色调 */
-  --color-strong: #aa26da;
-  /* 代码样式 */
-  --color-code: #9526da;
-  /* 引用边框色 */
-  --color-border-left: #8626da;
+#VPContent .VPHomeHero .image-bg {
+  background-color: #a84de160;
+  transition: background-color 1s ease-in, opacity 1.2s ease-out;
+}
 
-  /* 代码背景色 */
-  --color-code-bg: rgba(158, 84, 232, 0.3);
-  /* 引用背景色 */
-  --color-block-bg: rgba(205, 77, 225, 0.15);
+#VPContent .VPHomeHero>.container>.image:hover .image-bg {
+  background-color: #fff;
+  opacity: 0;
+}
+
+#VPContent .VPHomeHero .VPImage.image-src {
+  border-radius: 50%;
+  transition: transform 1s;
+  transform-origin: 25% 25%;
+}
+
+#VPContent .VPHomeHero>.container>.image:hover .VPImage.image-src {
+  transform: rotate(180deg);
 }
