@@ -6,7 +6,7 @@
 - Flutter
 
 
-## vite-setup
+## 本地运行
 
 安装依赖（若没有pnpm需要先全局安装）
 
@@ -21,7 +21,7 @@ pnpm i
 pnpm docs:dev
 ```
 
-## heroImage
+## 借物
 
 ![鈴仙・優曇華院・イナバ](./docs/public/EvJiiArXYAEyyuL.png)
 
