@@ -75,9 +75,9 @@ Dart SDK version: 2.17.1 (stable) (Tue May 17 17:58:21 2022 +0000) on "windows_x
 创建helloworld.dart文件，在vscode中利用codeRunner插件运行
 
 ```dart
-  main(){
-      print('helloworld');
-  }
+main(){
+    print('helloworld');
+}
 ```
 
 vscode会自己提示需要安装的插件，以提供提示、格式化

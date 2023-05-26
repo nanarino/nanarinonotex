@@ -1,6 +1,6 @@
-# nanarinote-flutter
+# ☘ 自用飞镖笔记
  
-学习笔记，基于 vitepress@1.0.0-alpha.47 构建，包含
+🎯笔记，基于 vitepress@1.0.0 构建，包含
 
 - dart
 - Flutter
