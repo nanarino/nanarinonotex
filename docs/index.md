@@ -3,24 +3,24 @@ layout: home
 titleTemplate: nanari
 
 hero:
-  name: nanarinote-flutter
+  name: nanariのnote-Ex
   tagline: どんな幻覚だって酔っぱらいの私には効かないよ。酔う事で最高の力が引き出せるってもんだねぇ
   image:
     src: /EvJiiArXYAEyyuL.png
     alt: 鈴仙・優曇華院・イナバ
   actions:
     - theme: brand
-      text: cancan
+      text: 飞镖
       link: /dart/
 
 features:
-  - title: 摆烂
+  - title: 赞助商1
     icon: 😶‍🌫️
-    details: 这个设计还原不了啊
-  - title: 躺平
+    details: 这是广告位1
+  - title: 赞助商2
     icon: 😪
-    details: 等着35岁失业就行
-  - title: 啊对对对
+    details: 这是广告位2
+  - title: 赞助商3
     icon: 🀄
-    details: uni-app，国产之光
+    details: 四川麻将好像没有红中吧
 ---

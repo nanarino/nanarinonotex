@@ -5,7 +5,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   base: '/',
   lang: 'zh-CN',
-  title: '7rinote-flutter',
+  title: '7rinotex',
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -16,9 +16,9 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/nanarino' },
       { icon: 'twitter', link: 'https://twitter.com/kogawananari' }
     ],
-    sidebar: [
-      {
-        text: 'dart',
+    sidebar: {
+      '/dart/': [{
+        text: '语言特性',
         items: [
           { text: '安装dart', link: '/dart/' },
           { text: '基本语法', link: '/dart/基本语法' },
@@ -26,15 +26,23 @@ export default defineConfig({
           { text: '函数', link: '/dart/函数' },
           { text: '类', link: '/dart/类' },
           { text: '异步', link: '/dart/异步' },
-        ],
-      },
-      {
-        text: 'flutter',
+        ]
+      }, {
+        text: 'Flutter',
         items: [
-          { text: '安装环境', link: '/flutter/' },
-        ],
-      },
+          { text: '安装环境', link: '/dart/flutter/' },
+        ]
+      }],
+      '/elixir/': [{
+        text: '语言特性',
+        items: [
+          { text: '安装elixir', link: '/elixir/' },
+        ]
+      }]
+    },
+    nav: [
+      { text: '飞镖', link: '/dart/', activeMatch: '/dart/' },
+      { text: '长生不老药', link: '/elixir/', activeMatch: '/elixir/' },
     ],
-
   }
 })
