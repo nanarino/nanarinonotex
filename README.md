@@ -23,9 +23,8 @@ pnpm docs:dev
 
 ## 借物
 
-![鈴仙・優曇華院・イナバ](./docs/public/EvJiiArXYAEyyuL.png)
+![星之卡比](https://codepen.io/desandro/pen/aqYXoa)
 
-封面图来自 くまもと先生（Twitter@skmmt3）
 
 
 ## 参考

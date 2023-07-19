@@ -10,18 +10,3 @@
   background-color: #a84de160;
   transition: background-color 1s ease-in, opacity 1.2s ease-out;
 }
-
-#VPContent .VPHomeHero>.container>.image:hover .image-bg {
-  background-color: #fff;
-  opacity: 0;
-}
-
-#VPContent .VPHomeHero .VPImage.image-src {
-  border-radius: 50%;
-  transition: transform 1s;
-  transform-origin: 25% 25%;
-}
-
-#VPContent .VPHomeHero>.container>.image:hover .VPImage.image-src {
-  transform: rotate(180deg);
-}

@@ -10,8 +10,8 @@ hero:
     alt: 鈴仙・優曇華院・イナバ
   actions:
     - theme: brand
-      text: 飞镖
-      link: /dart/
+      text: 长生不老药
+      link: /elixir/
 
 features:
   - title: 赞助商1

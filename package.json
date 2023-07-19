@@ -9,7 +9,11 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@types/zdog": "^1.1.2",
     "vitepress": "1.0.0-beta.1",
     "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "zdog": "^1.1.3"
   }
 }
