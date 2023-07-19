@@ -23,7 +23,7 @@ pnpm docs:dev
 
 ## 借物
 
-![星之卡比](https://codepen.io/desandro/pen/aqYXoa)
+[星之卡比](https://codepen.io/desandro/pen/aqYXoa)
 
 
 
