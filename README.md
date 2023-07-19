@@ -17,7 +17,7 @@ pnpm i
 启动命令（或运行 `docs_dev.cmd` ）：
 
 ```bash
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:5173
 pnpm docs:dev
 ```
 
