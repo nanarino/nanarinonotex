@@ -1,31 +1,33 @@
-# 安装dart环境
+# 安装dart SDK
 
 ## Windows
 
+以下powershell命令都以管理员身份运行
+
 利用choco安装dart SDK for windows：
-```bash
+```powershell
 choco install dart-sdk
 ```
 更新SDK：
-```bash
+```powershell
 choco upgrade dart-sdk
 ```
 
 若没有包管理器choco 需要先安装
 
-```bash
+```powershell
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 ```
 
 如果报错：`因为在此系统上禁止运行脚本`，可以查看是否是没有运行ps1权限
 
-```bash
+```powershell
 get-executionpolicy
 ```
 
 输出若为默认值：`Restricted` 可以使用以下命令：
 
-```bash
+```powershell
 set-ExecutionPolicy RemoteSigned
 ```
 
