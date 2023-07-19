@@ -7,6 +7,12 @@
 }
 
 #VPContent .VPHomeHero .image-bg {
-  background-color: #a84de160;
-  transition: background-color 1s ease-in, opacity 1.2s ease-out;
+  z-index: 1;
+  transition: opacity 1s;
+  background-image: radial-gradient(transparent 50%, #a84de160);
+  opacity: 0;
+}
+
+#VPContent .VPHomeHero .image-bg:hover {
+  opacity: 1;
 }
