@@ -4,6 +4,9 @@
   --vp-c-brand-lighter: #a223d0;
   --vp-c-brand-dark: #9526da;
   --vp-c-brand-darker: #8626da;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient( 135deg, #ffafd3 10%, #7f12be 100%);
 }
 
 #VPContent .VPHomeHero .image-bg {
