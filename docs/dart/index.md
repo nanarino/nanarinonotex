@@ -1,6 +1,12 @@
-# 安装dart SDK
+# 安装 Dart VM
+
+其实不用单独装，Flutter SDK 里带了 Dart SDK，
+
+如果只是需要一个全局 Dart VM ，则可以按照本内容按照
 
 ## Windows
+
+先决条件 已经安装choco包管理器 参考[安装choco](/elixir/#choco)的安装
 
 以下powershell命令都以管理员身份运行
 
@@ -13,45 +19,11 @@ choco install dart-sdk
 choco upgrade dart-sdk
 ```
 
-若没有包管理器choco 需要先安装
-
-```powershell
-iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
-```
-
-如果报错：`因为在此系统上禁止运行脚本`，可以查看是否是没有运行ps1权限
-
-```powershell
-get-executionpolicy
-```
-
-输出若为默认值：`Restricted` 可以使用以下命令：
-
-```powershell
-set-ExecutionPolicy RemoteSigned
-```
-
-届时删除`C:\ProgramData\chocolatey`后再次安装即可
-
-
-
-
-## MacOS
-
-利用brew安装dart SDK for Mac：
-
-```bash
-brew tap dart-lang/dart
-brew install dart
-```
-没有brew需要另外安装，这里略过
-
-
 ## 验证安装成功
 
 首次安装完成会这样显示
 
-```bash
+```powershell
 C:\Users\Administrator>dart
   ╔════════════════════════════════════════════════════════════════════════╗
   ║ The Dart tool uses Google Analytics to report feature usage statistics ║
@@ -67,14 +39,14 @@ C:\Users\Administrator>dart
 
 或者直接显示版本
 
-```bash
+```powershell
 C:\Users\Administrator>dart --version
 Dart SDK version: 2.17.1 (stable) (Tue May 17 17:58:21 2022 +0000) on "windows_x64"
 ```
 
-## 运行helloworld
+## 运行helloworld脚本
 
-创建helloworld.dart文件，在vscode中利用codeRunner插件运行
+创建helloworld.dart文件，在vscode中利用codeRunner插件运行 或 `dart ./helloworld.dart`，
 
 ```dart
 main(){

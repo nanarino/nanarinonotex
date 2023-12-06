@@ -17,6 +17,12 @@ export default defineConfig({
       { icon: 'twitter', link: 'https://twitter.com/kogawananari' }
     ],
     sidebar: {
+      '/kotlin/': [{
+        text: '语言特性',
+        items: [
+          { text: '安装kotlin', link: '/kotlin/' },
+        ]
+      }],
       '/dart/': [{
         text: '语言特性',
         items: [
@@ -41,8 +47,9 @@ export default defineConfig({
       }]
     },
     nav: [
-      { text: '飞镖', link: '/dart/', activeMatch: '/dart/' },
-      { text: '长生不老药', link: '/elixir/', activeMatch: '/elixir/' },
+      { text: 'dart', link: '/dart/', activeMatch: '/dart/' },
+      { text: 'kotlin', link: '/kotlin/', activeMatch: '/kotlin/' },
+      { text: 'elixir', link: '/elixir/', activeMatch: '/elixir/' },
     ],
   }
 })
