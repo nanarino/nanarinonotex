@@ -115,6 +115,8 @@ fun main(){
 
 kt相比kts文件相比要多一个main函数；
 
-编译出的class名会变成驼峰+Kt后缀；
+在vscode中利用codeRunner插件运行kt文件时默认是第二条命令（编译成jar）；
+
+第一条命令编译出的class文件名会变成驼峰+Kt后缀；
 
 `-include-runtime` 是kotlin运行时，如果是kotlin包 给其他kotlin引入的 那么不需要；
