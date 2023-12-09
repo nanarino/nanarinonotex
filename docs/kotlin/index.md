@@ -83,13 +83,38 @@ Type :help for help, :quit for quit
 
 ### 运行helloworld脚本
 
-创建helloworld.kts文件，在vscode中利用codeRunner插件运行 或 `kotlinc ./helloworld.kts`，
+创建helloworld.kts文件，在vscode中利用codeRunner插件运行 或命令行运行以下命令之一：
+
+- `kotlin ./helloworld.kts`
+- `kotlin -script ./helloworld.kts`
 
 这有点类似于 `ts-node` 单独运行ts文件，脚本不需要main方法以及文件名称相同的class
 
 
 ```kotlin
+// helloworld.kts
 println("Hello, world!")
 ```
 
 vscode会自己提示需要安装的插件，但在中国大陆需要配置git代理
+
+
+### 编译为class/jar
+
+创建helloworld.kt文件，命令行运行以下命令分别编译为class/jar并运行：
+
+- `kotlinc ./helloworld.kt -include-runtime -d helloworld && java HelloworldKt`
+- `kotlinc ./helloworld.kt -include-runtime -d helloworld.jar && java helloworld.jar`
+
+```kotlin
+// helloworld.kt
+fun main(){
+    println("Hello, world!")
+}
+```
+
+kt相比kts文件相比要多一个main函数；
+
+编译出的class名会变成驼峰+Kt后缀；
+
+`-include-runtime` 是kotlin运行时，如果是kotlin包 给其他kotlin引入的 那么不需要；
