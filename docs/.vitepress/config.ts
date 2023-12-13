@@ -35,7 +35,7 @@ export default defineConfig({
           { text: '数据类型', link: '/dart/types' },
           { text: '函数', link: '/dart/function' },
           { text: '类', link: '/dart/class' },
-          { text: '异步', link: '/dart/异步' },
+          { text: '异步', link: '/dart/async' },
         ]
       }, {
         text: 'Flutter',
