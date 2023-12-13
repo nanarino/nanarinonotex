@@ -21,16 +21,20 @@ export default defineConfig({
         text: '语言特性',
         items: [
           { text: '安装kotlin', link: '/kotlin/' },
+          { text: '基本语法', link: '/kotlin/basic' },
+          { text: '函数', link: '/kotlin/function' },
+          { text: '类', link: '/kotlin/class' },
+          { text: '数据类型', link: '/kotlin/types' },
         ]
       }],
       '/dart/': [{
         text: '语言特性',
         items: [
           { text: '安装dart', link: '/dart/' },
-          { text: '基本语法', link: '/dart/基本语法' },
-          { text: '数据类型', link: '/dart/数据类型' },
-          { text: '函数', link: '/dart/函数' },
-          { text: '类', link: '/dart/类' },
+          { text: '基本语法', link: '/dart/basic' },
+          { text: '数据类型', link: '/dart/types' },
+          { text: '函数', link: '/dart/function' },
+          { text: '类', link: '/dart/class' },
           { text: '异步', link: '/dart/异步' },
         ]
       }, {

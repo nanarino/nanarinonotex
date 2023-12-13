@@ -2,11 +2,11 @@
 
 假设你学习过python与JavaScript
 
-笔记也只是记录一个大概，API查询还是得看[官网](https://dart.dev/samples)
+笔记也只是记录一个大概，详细还是得看[官方文档](https://dart.dev/language)
 
 ## 注释
 
-同C语言
+同JavaScript
 ```dart
 // 单行注释
 
@@ -17,10 +17,12 @@
 
 ## 变量声明
 
-dart语言和Java一样要求类型在变量名/参数名的前面😅，    
-而python、kotlin、swift、typescript都是写在后面的。
+dart语言和Java一样要求类型前置😅
+
+好在类型有自动推断
 
 （修饰符 / 类型） 变量名（ = 变量值）;
+
 ```dart
 //var 自动推断类型
 var age = 42;
@@ -80,6 +82,15 @@ querySelector('#confirm') // Get an object.
 
 `...??`可以判空解包容器
 
+
+## 模板字符串
+
+```dart
+const age = 18;
+print('今年$age岁，明年${age+1}岁');
+```
+
+
 ## 流程控制
 
 流程控制使用
@@ -94,6 +105,11 @@ querySelector('#confirm') // Get an object.
 `var` 在for中具有词法作用域
 
 可迭代对象都可以使用`.forEach` `.map` `.where(filter)` `.reduce` `.any(some)` `.every(all)`等
+
+学多了容易混淆方法名😅：
+- python：`all` `any`
+- dart：`every` `any`
+- js: `every` `some`
 
 
 ## 异常

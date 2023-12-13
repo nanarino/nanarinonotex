@@ -66,20 +66,6 @@
 调用类型的静态构造方法`.parse()`  可以转换为该类型
 
 
-## 构造器
-
-和Javascript一样使用`new`关键字构造创建。`new`可以省略且推荐省略
-```dart
-var dict = Map<String, String>();
-dict['abandon'] = 'give up';
-```
-
-也有一些看起来是静态方法的非默认的构造方法，大多数是from开头的方法
-```dart
-var li = List<int>.filled(3, 0);
-print(li);//[0,0,0]
-```
-
 ## 枚举
 ```dart
 enum HTTPMethod {
