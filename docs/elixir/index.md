@@ -60,7 +60,7 @@ Elixir 1.14.4 (compiled with Erlang/OTP 25)
 创建helloworld.exs文件，在vscode中利用codeRunner插件运行 或 `elixir ./helloworld.exs`，
 
 ```elixir
-IO.puts("Hello world")
+"Hello world!" |> IO.puts
 ```
 
 vscode会自己提示需要安装的插件，但在中国大陆需要配置git代理

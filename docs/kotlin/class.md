@@ -12,6 +12,9 @@ val rectangle = Rectangle(5.0, 2.0)
 println("The perimeter is ${rectangle.perimeter}")
 ```
 
+
+## 实例判断
+
 可以使用 `obj is type` 来判断是否属于这个类型实例（子类实例也支持）
 
 `obj is! type` 是判断不属于实例

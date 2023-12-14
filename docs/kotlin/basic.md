@@ -58,14 +58,15 @@ val l = b!!.length
 
 ## 运算符
 
-运算符与JavaScript的一样  
-特别的:
+运算符与JavaScript的一样 特别的:
+
 `?:` 和JavaScript里的`??`相似 左边为null返回右边
 
 `?.` 和JavaScript里相似 左边没有右边这个attr时返回null
 
 `in`, `!in` 和JavaScript里的`in` `not in`相似，判断是否存在
 
+`===` 和 `!==` 可以判断两个对象是否是同一个 不可重载
 
 ## 模板字符串
 
@@ -112,6 +113,8 @@ fun test() {
         count()
     } catch (e: ArithmeticException) {
         throw IllegalStateException(e)
+    } finally {
+        // cleanup
     }
 
     // Working with result
