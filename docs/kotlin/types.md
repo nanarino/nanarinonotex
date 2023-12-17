@@ -15,7 +15,16 @@
 以上类型加后缀Array 变成数组 相当于java的 `Int []` 或者 JavaScript 的 `Uint8Array`
 
 - 数组 `Array` 永远是可变类型
-    
+    - 可以通过 `.toList()` `.toSet()` `.toMap()` 转成Collections
+    ```kotlin
+    val pairArray = arrayOf(
+        "apple" to 120,
+        "banana" to 150,
+        "cherry" to 90,
+    )
+    println(pairArray.toMap())
+    ```
+
 
 
 
@@ -42,9 +51,24 @@
         println("$k -> $v")
     }
     ```
+    - `.getValue(key)` 获取value或默认value 没有会抛出异常
+    - `.withDefault(key -> defaultValue)` 根据Map创建一个有默认值的Map
 
 以上类型加前缀mutable 变成可变类型
 
 ```kotlin
-val openIssues: MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescr2", "uniqueDescr3")
+val openIssues: MutableSet<Int> = mutableSetOf(121, 276, 279)
 ```
+
+每个Collection都有以下高阶函数：
+- `.getOrElse(key,)` 安全访问 允许越界
+- `.forEach()`, `.map()` `.filter()` `.fold(reduce,)`
+- `.any()`, `.all()`, `.none()`
+- `.find()`, `.findLast()` 找不到返回null
+- `.first()`, `.last()` 找不到抛出异常
+- `.count()`
+- `.partition()` 返回满足和不满足条件的两组Collection
+- `.associateBy(, getter)`, `.groupBy(, getter)`
+- `.flatMap()`
+- `.minOrNull()`, `.maxOrNull()`, 
+- `.sorted()`, `.zip()`, 

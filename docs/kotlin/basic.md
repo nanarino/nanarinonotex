@@ -2,7 +2,11 @@
 
 假设你学习过python与JavaScript
 
-笔记也只是记录一个大概，详细还是得看[官方文档](https://kotlinlang.org/docs/basic-syntax.html)
+笔记也只是记录一个大概，详细还是得看官方文档：
+
+- [Basics](https://kotlinlang.org/docs/basic-syntax.html)
+- [Example](https://play.kotlinlang.org/byExample/overview)
+- [API reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/)
 
 ## 注释
 
@@ -98,7 +102,14 @@ println("今 年 $age 岁，明 年 ${age+1} 岁");
     }
     ```
 - `while` `do while` 条件循环
-- `break` 和 `continue`
+- `break` 和 `continue` 支持标签
+    ```kotlin
+    loop@ for (i in 1..100) {
+        for (j in 1..100) {
+            if (...) break@loop
+        }
+    }
+    ```
 
 
 ## 异常
