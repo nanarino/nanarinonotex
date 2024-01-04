@@ -1,12 +1,16 @@
 :root {
-  --vp-c-brand: #c84de1;
-  --vp-c-brand-light: #c44bf0;
-  --vp-c-brand-lighter: #a223d0;
-  --vp-c-brand-dark: #9526da;
-  --vp-c-brand-darker: #8626da;
+  --vp-c-indigo-1: #c84de1;
+  --vp-c-indigo-2: #c44bf0;
+  --vp-c-indigo-3: #a223d0;
+  --vp-c-indigo-soft: #8626da;
 
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient( 135deg, #ffafd3 10%, #7f12be 100%);
+  --vp-home-hero-name-background: linear-gradient(135deg, #ffafd3 10%, #7f12be 100%);
+}
+
+.title,
+.clip {
+  font-family: monospace;
 }
 
 #VPContent .VPHomeHero .image-bg {

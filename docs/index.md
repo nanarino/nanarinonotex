@@ -3,7 +3,7 @@ layout: home
 titleTemplate: nanari
 
 hero:
-  name: ななりのノート冊ー𝕖𝕩
+  name: nanarinote𝕩
   tagline: どんな幻覚だって酔っぱらいの私には効かないよ。酔う事で最高の力が引き出せるってもんだねぇ
   image:
     src: /EvJiiArXYAEyyuL.png

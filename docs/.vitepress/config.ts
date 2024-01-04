@@ -5,7 +5,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   base: '/',
   lang: 'zh-CN',
-  title: '7rinotex',
+  title: 'nanarinotex',
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
