@@ -1,9 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref, onBeforeUnmount } from "vue";
 import Zdog from "zdog";
 
-
-const canvas = ref(null)
+const canvas = ref<HTMLCanvasElement | string>('.zdog-canvas')
 const ani = ref(NaN)
 // https://codepen.io/desandro/pen/aqYXoa
 onMounted(() => {
@@ -21,7 +20,7 @@ onMounted(() => {
   var illo = new Zdog.Illustration({
     element: canvas.value,
     dragRotate: true,
-    resize: 'fullscreen',
+    resize: true,
     onDragStart: function () {
       isSpinning = false;
     },
@@ -208,7 +207,7 @@ onMounted(() => {
 
   // star
   var starPath = (function () {
-    var path = [];
+    var path: { x: number, y: number }[] = [];
     var starRadiusA = 3;
     var starRadiusB = 1.7;
     for (var i = 0; i < 10; i++) {
@@ -311,23 +310,19 @@ onMounted(() => {
     illo.updateRenderGraph();
     return requestAnimationFrame(animate);
   }
-
   ani.value = animate();
-
 })
 
-onBeforeUnmount(() => {
-  cancelAnimationFrame(ani.value);
-})
+onBeforeUnmount(() => cancelAnimationFrame(ani.value))
 </script>
 <template>
   <canvas ref="canvas" class="zdog-canvas"></canvas>
 </template>
 <style scoped>
-  canvas{
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 100%;
-  }
+canvas {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+}
 </style>

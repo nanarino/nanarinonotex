@@ -9,12 +9,18 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanarino/nanarinonotex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nanarino/nanarinonotex/issues"
+  },
+  "homepage": "https://nanarino.github.io/nanarinonotex/",
   "devDependencies": {
     "@types/zdog": "^1.1.7",
     "vitepress": "1.0.0-rc.35",
-    "vue": "^3.4.5"
-  },
-  "dependencies": {
+    "vue": "^3.4.5",
     "zdog": "^1.1.3"
   }
 }

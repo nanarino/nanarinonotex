@@ -7,6 +7,7 @@
 - 长生不老药🍇
 
 
+
 ## 本地运行
 
 安装依赖
@@ -15,19 +16,22 @@
 pnpm i
 ```
 
-启动命令（或运行 `docs_dev.cmd` ）：
+脚手架命令
 
 ```bash
-# serve with hot reload at localhost:5173
+# serve with hot reload at localhost:8080
 pnpm docs:dev
+
+# build for production with minification
+pnpm docs:build
 ```
+
+可以将配置文件中的`base: '/nanarinonotex/'`改为`base: '/'` 
+
+
 
 ## 借物
 
+封面
+
 [星之卡比](https://codepen.io/desandro/pen/aqYXoa)
-
-
-
-## 参考
-
-[官方中文文档](https://dart.cn/)

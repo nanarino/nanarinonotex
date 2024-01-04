@@ -5,9 +5,6 @@ titleTemplate: nanari
 hero:
   name: nanarinote𝕩
   tagline: どんな幻覚だって酔っぱらいの私には効かないよ。酔う事で最高の力が引き出せるってもんだねぇ
-  image:
-    src: /EvJiiArXYAEyyuL.png
-    alt: 鈴仙・優曇華院・イナバ
   actions:
     - theme: brand
       text: 长生不老药

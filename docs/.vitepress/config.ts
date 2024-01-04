@@ -1,9 +1,8 @@
-
 import { defineConfig } from "vitepress";
 
-
 export default defineConfig({
-  base: '/',
+  // base: '/',
+  base: 'nanarinonotex',
   lang: 'zh-CN',
   title: 'nanarinotex',
   lastUpdated: true,
