@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   // base: '/',
-  base: 'nanarinonotex',
+  base: '/nanarinonotex/',
   lang: 'zh-CN',
   title: 'nanarinotex',
   lastUpdated: true,
@@ -46,6 +46,9 @@ export default defineConfig({
         text: '语言特性',
         items: [
           { text: '安装elixir', link: '/elixir/' },
+          { text: '基本语法', link: '/elixir/basic' },
+          { text: '数据类型', link: '/elixir/types' },
+          { text: '函数', link: '/elixir/function' },
         ]
       }]
     },

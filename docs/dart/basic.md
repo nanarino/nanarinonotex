@@ -1,7 +1,5 @@
 # 基本语法
 
-假设你学习过python与JavaScript
-
 笔记也只是记录一个大概，详细还是得看[官方文档](https://dart.dev/language)
 
 ## 注释
