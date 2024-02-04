@@ -54,6 +54,10 @@ Erlang/OTP 25 [erts-13.2.2.1] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async
 Elixir 1.14.4 (compiled with Erlang/OTP 25)
 ```
 
+在cmd中使用 `iex` 可以进入交互式环境，powershell里不可以进，因为iex是powershell的内置命令。
+
+在iex中使用 `clear` 回车可以清空输入
+
 
 ## 运行helloworld脚本
 
@@ -64,3 +68,37 @@ Elixir 1.14.4 (compiled with Erlang/OTP 25)
 ```
 
 vscode会自己提示需要安装的插件，但在中国大陆需要配置git代理
+
+
+
+## 使用mix创建项目
+
+
+### 初始化空项目
+
+使用 `mix new MyProject` 命令创建新的项目，里面有一些样板代码
+
+进入生成的项目根目录后 使用 `iex -S mix` 进入交互式环境，且自动导入了项目的主函数（java项目是一个主类，elixir的项目是一个函数）
+
+在iex中使用 `recompile` 回车可以重新编译项目
+
+
+### 依赖管理
+
+使用hex来管理依赖包
+
+使用 `mix local.hex --force` 命令安装或尝试升级它
+
+使用 `mix compile` 编译项目
+
+使用 `mix deps.get` 安装项目依赖
+
+
+### 使用目标框架的脚手架创建空项目
+
+hex安装好是前提。
+
+使用 `mix archive.install hex Framework_new` 安装需要的脚手架
+
+使用 `mix Framework.new MyProject` 命令创建新的目标框架项目，里面有目标框架的样板结构和代码
+
