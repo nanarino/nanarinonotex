@@ -83,9 +83,12 @@ println("今 年 $age 岁，明 年 ${age+1} 岁");
 
 流程控制使用
 - `if`、`else if`、`else` 可以使用 `if (a > b) a else b` 表达式
-- `for in` 遍历对象 范围是左闭右闭 这和stylus的range的简写语法一致
+- `for in` 遍历对象 范围是左闭右闭 rust的语法一致
     ```kotlin
     for (i in 1..3) {
+        println(i)
+    }
+    for (i in 1..<3) {
         println(i)
     }
     for (i in 6 downTo 0 step 2) {
