@@ -19,8 +19,8 @@
   "homepage": "https://nanarino.github.io/nanarinonotex/",
   "devDependencies": {
     "@types/zdog": "^1.1.7",
-    "vitepress": "1.0.0-rc.35",
-    "vue": "^3.4.5",
+    "vitepress": "^1.0.1",
+    "vue": "^3.4.21",
     "zdog": "^1.1.3"
   }
 }
