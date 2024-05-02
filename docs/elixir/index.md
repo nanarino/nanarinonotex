@@ -140,6 +140,6 @@ mix hex.repo set hexpm --url https://hexpm.upyun.com
 
 ### vscode
 
-有的版本会不适用需要回避：
+有的版本会不适用 ElixirLS（语言服务器）需要降低或提高版本：
 
 > Erlang OTP 26.0 and 26.1 have critical bugs on Windows. Please make sure OTP 26.2 or greater is installed
