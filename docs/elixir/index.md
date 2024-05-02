@@ -75,10 +75,11 @@ $envPath += ";$elixirPath;$erlangPath"
 使用命令直接显示版本
 
 ```powershell
-C:\Users\Administrator> elixir -v
-Erlang/OTP 25 [erts-13.2.2.1] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [jit:ns]
+PS C:\Users\Administrator> elixir -v
+Erlang/OTP 26 [erts-14.2.2] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [jit:ns]
 
-Elixir 1.14.4 (compiled with Erlang/OTP 25)
+Elixir 1.16.1 (compiled with Erlang/OTP 26)
+
 ```
 
 在 cmd 中使用 `iex` 可以进入交互式环境，powershell 里不可以进，因为 iex 是 powershell 的内置命令。
@@ -131,8 +132,14 @@ hex 安装好是前提。
 
 ### 设置镜像
 
-默认的 hex 的 S3 服务器在中国大陆稍逊
+默认的 [hex](https://repo.hex.pm) 的 S3 服务器在中国大陆稍逊
 
 ```powershell
 mix hex.repo set hexpm --url https://hexpm.upyun.com
 ```
+
+### vscode
+
+有的版本会不适用需要回避：
+
+> Erlang OTP 26.0 and 26.1 have critical bugs on Windows. Please make sure OTP 26.2 or greater is installed
