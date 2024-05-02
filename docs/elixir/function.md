@@ -48,7 +48,7 @@ iex> Greeter.hello("Sean")
 
 `do` 之前支持 `when` 条件
 
-`\\` 参数设置默认值 但由于签名匹配没必要
+`\\` 参数设置默认值 但由于签名匹配基本没必要
 
 ## 递归
 
@@ -66,7 +66,7 @@ Length.of [1, 2, 3]
 
 ## 参数解构
 
-参数是map等时支持结构，结构失败算参数匹配失败转走其他签名
+参数是 map 等时支持结构，结构失败算参数匹配失败转走其他签名
 
 `=` 左右顺序无关
 
@@ -101,9 +101,42 @@ end
 iex> %Example.User{name: "Steve"}
 ```
 
-可以和map 相互匹配
+可以和 map 相互匹配
 
 可以用`alias` 继承另一个结构体
+
+## sigils
+
+类似 JavaScript 等语言的字符串模板的 tag，如 `` `<p>${var}</p>` ``
+
+或者 python 内置的 f-string，r-string，如 `f"{var}"`
+
+### 内置
+
+- `~C` 创建一个不处理插值和转义字符的字符列表
+- `~c` 创建一个处理插值和转义字符的字符列表
+- `~R` 创建一个不处理插值和转义字符的正则表达式
+- `~r` 创建一个处理插值和转义字符的正则表达式
+- `~S` 创建一个不处理插值和转义字符的字符串
+- `~s` 创建一个处理插值和转义字符的字符串
+- `~W` 创建一个不处理插值和转义字符的单词列表
+- `~w` 创建一个处理插值和转义字符的单词列表
+- `~N` 创建一个 `NaiveDateTime` 数据结构
+- `~U` 创建一个 `DateTime` 数据结构
+
+### 自定义
+
+```elixir
+defmodule MySigils do
+  def sigil_p(string, []), do: String.upcase(string)
+end
+
+iex> import MySigils
+nil
+
+iex>  ~p/elixir school/
+ELIXIR SCHOOL
+```
 
 ## 宏
 
@@ -112,4 +145,3 @@ iex> %Example.User{name: "Steve"}
 可以用 `require` 解构整个模块的宏
 
 可以用 `use` 调用模块的`__using__`宏函数钩子
-
