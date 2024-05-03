@@ -6,7 +6,7 @@
 - float 不支持 `.`开头
 - boolean 除了 `false` 和 `nil` 之外所有的值都为真。
 - atom 一种 symbol 类型 `:true == true` 模块名也是原子
-- string 字面量 `"OP"` 或 `<<79,80>>` 支持换行 单引号的字符列表的字面量表示标记弃用了
+- string 字面量 `"OP"` 或 `<<79,80>>` 前者是 utf8 且支持`\u`转义的。支持换行。单引号的字符列表的字面量表示标记弃用了
 - list 字面量`[i,]` 实际上是用**链表**实现 获取长度是 O(n)
   - 使用 `++` 拼接两个列表
   - 使用 `[ head | list ]` 插入头尾
@@ -14,19 +14,23 @@
   - `hd()` `tl()` 获取头元素和尾列 （第一个是头元素 剩下的都在尾列）
   - 使用 `[head | tail] = list` 解构头尾
 - tuple 字面量`{i,}` 不可变数组 内存连续
+  - 第一个元素是 atom 时也称 Record
+- function
 
-## 联想式（associative）
+## COLLECTIONS/ENUMERABLES
 
-- keyword list 二元元组列表 用 ts 表达相当于 `Object.entries(obj as Record<symbol, any>)` 有 2 种字面量：
-  - `[foo: "bar", hello: "world"]`
-  - `[{:foo, "bar"}, {:hello, "world"}]`
-- map 字面量：`%{k => v,}` 无序 键类型任意
+### Associative
+
+- Keyword 字面量：`[{k, v},]`，二元元组列表 用 ts 表达相当于 `Object.entries(obj)`
+  - `{:key, v}` 可以写成 `key:v` 但得后置 如 `[{:hello, "world"}, foo: "bar"]`
+- Map 字面量：`%{k => v,}` 无序 键类型任意
   - `map.hello` 和 `map["hello"]` 获取值
-  - `:key =>` 可以写成 `key:`
+  - `:key =>` 可以写成 `key:` 但得后置 如 `%{:hello => "world", foo: "bar"}`
   - `%{ map | **map }` 用 ts 表达相当于 `Object.assign(o1, o2)` 但键若不存在会 `KeyError`
   - `Map.put(map, key, value)` 添加新 key
+- MapSet 没有字面量 使用 `MapSet.new([1, :two, {"three"}])` 创建
 
-## 推导式（comprehensions）
+### Comprehensions
 
 ```elixir
 # 关键字列表
@@ -47,7 +51,7 @@ iex> for x <- 1..10, is_even(x), do: x
 [2, 4, 6, 8, 10]
 ```
 
-### `into`
+#### `into`
 
 ```elixir
 iex> for {k, v} <- [one: 1, two: 2, three: 3], into: %{}, do: {k, v}
@@ -56,7 +60,13 @@ iex> for c <- [72, 101, 108, 108, 111], into: "", do: <<c>>
 "Hello"
 ```
 
-## Enum
+### Range
+
+语法 `first..last//step` 如 `1..10` `10..1//-1` 左闭右闭
+
+不支持 `1..<10` 写法
+
+### Enum
 
 内置了 70 多个操作枚举类型的函数 `all` `any` `map` `filter` `reduce` 等
 
