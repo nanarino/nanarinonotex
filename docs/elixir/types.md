@@ -6,8 +6,8 @@
 - float 不支持 `.`开头
 - boolean 除了 `false` 和 `nil` 之外所有的值都为真。
 - atom 一种 symbol 类型 `:true == true` 模块名也是原子
-- string 使用双引号 支持换行 单引号的字符列表被弃用了
-- list 字面量`[i,]` 链表实现 获取长度是 O(n)
+- string 字面量 `"OP"` 或 `<<79,80>>` 支持换行 单引号的字符列表的字面量表示标记弃用了
+- list 字面量`[i,]` 实际上是用**链表**实现 获取长度是 O(n)
   - 使用 `++` 拼接两个列表
   - 使用 `[ head | list ]` 插入头尾
   - 使用 `--` 过滤（只过滤相同的数量）
@@ -15,16 +15,46 @@
   - 使用 `[head | tail] = list` 解构头尾
 - tuple 字面量`{i,}` 不可变数组 内存连续
 
-## Associative
+## 联想式（associative）
 
 - keyword list 二元元组列表 用 ts 表达相当于 `Object.entries(obj as Record<symbol, any>)` 有 2 种字面量：
   - `[foo: "bar", hello: "world"]`
   - `[{:foo, "bar"}, {:hello, "world"}]`
-- map 字面量 `%{k => v}` 无序 键类型任意
+- map 字面量：`%{k => v,}` 无序 键类型任意
   - `map.hello` 和 `map["hello"]` 获取值
   - `:key =>` 可以写成 `key:`
   - `%{ map | **map }` 用 ts 表达相当于 `Object.assign(o1, o2)` 但键若不存在会 `KeyError`
   - `Map.put(map, key, value)` 添加新 key
+
+## 推导式（comprehensions）
+
+```elixir
+# 关键字列表
+iex> for {_key, val} <- [one: 1, two: 2, three: 3], do: val
+[1, 2, 3]
+
+# 映射
+iex> for {k, v} <- %{"a" => "A", "b" => "B"}, do: {k, v}
+[{"a", "A"}, {"b", "B"}]
+
+# 二进制
+iex> for <<c <- "hello">>, do: <<c>>
+["h", "e", "l", "l", "o"]
+
+# 过滤 可以多个
+import Integer
+iex> for x <- 1..10, is_even(x), do: x
+[2, 4, 6, 8, 10]
+```
+
+### `into`
+
+```elixir
+iex> for {k, v} <- [one: 1, two: 2, three: 3], into: %{}, do: {k, v}
+%{one: 1, three: 3, two: 2}
+iex> for c <- [72, 101, 108, 108, 111], into: "", do: <<c>>
+"Hello"
+```
 
 ## Enum
 

@@ -8,7 +8,7 @@
 
 ## 注释
 
-同python
+同 python
 
 ```elixir
 # hello
@@ -27,10 +27,9 @@ iex> x
 
 `^` 匹配已被赋值的常量名
 
-
 ## 运算符
 
-运算符与JavaScript的一样 特别的:
+运算符与 JavaScript 的一样 特别的:
 
 `===` 才能区分浮点和整数
 
@@ -38,14 +37,11 @@ iex> x
 
 `and` `or` `not` 用于布尔值（第一个参数）
 
-
-
 ## 模板字符串
 
 ```elixir
 "Hello #{name}"
 ```
-
 
 ## 流程控制
 
@@ -67,7 +63,7 @@ case {:ok, "Hello World"} do
 end
 ```
 
-`_` 用来兜底 
+`_` 用来兜底
 
 `->` 前支持 `when` 条件
 
@@ -79,7 +75,24 @@ cond do
   true -> "Catch all"
 end
 ```
-`cond` 相当于其他语言 switch
+
+`cond` 相当于其他语言的 `match`
+
+## 缩进
+
+官方推荐 2 空格缩进，如果
+
+```elixir
+def fun do
+  :todo
+end
+```
+
+中 缩进的 `:todo` 只有一行 那么也可以简写为
+
+```elixir
+def fun do: :todo
+```
 
 
 ## 异常
