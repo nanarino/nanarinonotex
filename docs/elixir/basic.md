@@ -94,7 +94,6 @@ end
 def fun do: :todo
 ```
 
-
 ## 异常
 
 抛出

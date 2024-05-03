@@ -4,7 +4,8 @@
 
 ## 注释
 
-同JavaScript
+同 JavaScript
+
 ```dart
 // 单行注释
 
@@ -15,7 +16,7 @@
 
 ## 变量声明
 
-dart语言和Java一样要求类型前置😅
+dart 语言和 Java 一样要求类型前置 😅
 
 好在类型有自动推断
 
@@ -39,17 +40,20 @@ dynamic obj = '??'
 //late和const新手不要尝试一起修饰
 late String ip = getIP();
 ```
+
 初始化之前变量为`null`
 
 ## 空安全
 
-如果声明一个可能为null的变量，可以加上问号表示可以为null
+如果声明一个可能为 null 的变量，可以加上问号表示可以为 null
+
 ```dart
 int? a = 1;
 a = null;
 ```
 
 如果明确知道一个表达式不为空，但解释器认为可以为空，可以加上感叹号来断言
+
 ```dart
 Map<String, double> map = {'1':1.0};
 double a = map['1']!;
@@ -57,13 +61,13 @@ double a = map['1']!;
 
 ## 运算符
 
-运算符与JavaScript的一样  
+运算符与 JavaScript 的一样  
 特别的:
-`??` 和JavaScript里相似 左边为null返回右边
+`??` 和 JavaScript 里相似 左边为 null 返回右边
 
-`?.` 和JavaScript里相似 左边没有右边这个attr时返回null
+`?.` 和 JavaScript 里相似 左边没有右边这个 attr 时返回 null
 
-`??=` 左边为null时赋值
+`??=` 左边为 null 时赋值
 
 `%`是取模而不是取余。整除使用运算符`~/`
 
@@ -76,10 +80,9 @@ querySelector('#confirm') // Get an object.
     ..onClick.listen((e) => window.alert('Confirmed!'));
 ```
 
-`?[]`可以判空访问item
+`?[]`可以判空访问 item
 
 `...??`可以判空解包容器
-
 
 ## 模板字符串
 
@@ -88,31 +91,32 @@ const age = 18;
 print('今年$age岁，明年${age+1}岁');
 ```
 
-
 ## 流程控制
 
 流程控制使用
-- `if`、`else if`、`else` if只能判断布尔类型
+
+- `if`、`else if`、`else` if 只能判断布尔类型
 - `for`、`for in`
-- `switch case`  case只能匹配静态字面量等编译时常量
+- `switch case` case 只能匹配静态字面量等编译时常量
 - `while`、`do while`
 - `break` 和 `continue`
 
-基本与JavaScript一样，但没有`for of`循环
+基本与 JavaScript 一样，但没有`for of`循环
 
-`var` 在for中具有词法作用域
+`var` 在 for 中具有词法作用域
 
 可迭代对象都可以使用`.forEach` `.map` `.where(filter)` `.reduce` `.any(some)` `.every(all)`等
 
-学多了容易混淆方法名😅：
+学多了容易混淆方法名 😅：
+
 - python：`all` `any`
 - dart：`every` `any`
 - js: `every` `some`
 
-
 ## 异常
 
 抛出
+
 ```dart
 throw FormatException('Expected at least 1 section');
 
@@ -120,6 +124,7 @@ throw 'Out of llamas!';
 ```
 
 捕获
+
 ```dart
 try {
     breedMoreLlamas();

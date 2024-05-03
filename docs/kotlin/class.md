@@ -1,8 +1,8 @@
 # 类
 
-不需要额外的constructor
+不需要额外的 constructor
 
-实例化不需要new
+实例化不需要 new
 
 ```kotlin
 class Rectangle(val height: Double, val length: Double) {
@@ -12,7 +12,6 @@ val rectangle = Rectangle(5.0, 2.0)
 println("The perimeter is ${rectangle.perimeter}")
 ```
 
-
 ## 实例判断
 
 可以使用 `obj is type` 来判断是否属于这个类型实例（子类实例也支持）
@@ -20,7 +19,6 @@ println("The perimeter is ${rectangle.perimeter}")
 `obj is! type` 是判断不属于实例
 
 `obj as type` 可以把对象转换为特定的类型
-
 
 ## 继承
 
@@ -36,7 +34,6 @@ class Rectangle(val height: Double, val length: Double): Shape() {
 
 重写方法或属性需要 `override` 修饰符。
 
-
 ## 私有类
 
 只能在本包中实例化或继承的类
@@ -45,13 +42,11 @@ class Rectangle(val height: Double, val length: Double): Shape() {
 sealed class Mammal(val name: String)
 ```
 
-
 ## 数据类
 
 ```kotlin
 data class Customer(val name: String, val email: String)
 ```
-
 
 ## 抽象类
 
@@ -73,7 +68,6 @@ fun main() {
     myObject.doSomething()
 }
 ```
-
 
 ## 单例类
 
@@ -113,4 +107,3 @@ enum class State {
 
 val state = State.RUNNING
 ```
-

@@ -6,15 +6,18 @@
 
 ## Windows
 
-先决条件 已经安装choco包管理器 参考[安装choco](/elixir/#choco)的安装
+先决条件 已经安装 choco 包管理器 参考[安装 choco](/elixir/#choco)的安装
 
-以下powershell命令都以管理员身份运行
+以下 powershell 命令都以管理员身份运行
 
-利用choco安装dart SDK for windows：
+利用 choco 安装 dart SDK for windows：
+
 ```powershell
 choco install dart-sdk
 ```
-更新SDK：
+
+更新 SDK：
+
 ```powershell
 choco upgrade dart-sdk
 ```
@@ -44,9 +47,9 @@ C:\Users\Administrator>dart --version
 Dart SDK version: 2.17.1 (stable) (Tue May 17 17:58:21 2022 +0000) on "windows_x64"
 ```
 
-## 运行helloworld脚本
+## 运行 helloworld 脚本
 
-创建helloworld.dart文件，在vscode中利用codeRunner插件运行 或 `dart ./helloworld.dart`，
+创建 helloworld.dart 文件，在 vscode 中利用 codeRunner 插件运行 或 `dart ./helloworld.dart`，
 
 ```dart
 main(){
@@ -54,4 +57,4 @@ main(){
 }
 ```
 
-vscode会自己提示需要安装的插件，以提供提示、格式化
+vscode 会自己提示需要安装的插件，以提供提示、格式化

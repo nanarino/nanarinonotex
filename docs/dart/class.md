@@ -1,6 +1,6 @@
 # 类
 
-class关键字可以在**顶层**声明一个类
+class 关键字可以在**顶层**声明一个类
 
 ```dart
 class Point {
@@ -30,11 +30,9 @@ main() {
 
 其中，声明一个和类名同名的方法即是默认构造方法（constructor）。
 
-其他非默认构造方法是静态方法，很多以from开头的都是
+其他非默认构造方法是静态方法，很多以 from 开头的都是
 
 实例化时 `new` 可以省略且推荐省略
-
-
 
 ## 静态
 
@@ -42,8 +40,7 @@ main() {
 
 ## 私有
 
-`_`开头即为私有。JavaScript是以#开头😅
-
+`_`开头即为私有。JavaScript 是以#开头 😅
 
 ## 声明简化
 
@@ -52,6 +49,7 @@ main() {
 构造方法不会被继承
 
 上一段的简化写法，这个冒号后面官网叫**重定向构造函数**。
+
 ```dart
 class Point {
     double x;
@@ -63,6 +61,7 @@ class Point {
 ```
 
 也可简化为这样，这个冒号后面官网叫**初始化列表**。
+
 ```dart
 class Point {
     double x;
@@ -78,6 +77,7 @@ class Point {
 ## 常量构造
 
 如果类生成的对象都是不变的，可以在生成这些对象时就将其变为**编译时常量**
+
 ```dart
 class ImmutablePoint {
 
@@ -107,7 +107,7 @@ main() {
 
 ## 继承
 
-使用`extends`关键字单继承一个父类, super指代父类，this指代本类
+使用`extends`关键字单继承一个父类, super 指代父类，this 指代本类
 
 ```dart
 class Point3D extends Point {
@@ -117,12 +117,12 @@ class Point3D extends Point {
     toString() => 'Point<x=$x, y=$y, z=$z>';
 }
 ```
+
 除了`null`所有的类型都继承`Object`
 
 重写父类的方法需要`@override`装饰
 
-使用extends还可以限制范型继承，后面跟`?`允许null值 `class A<T extends Object>`
-
+使用 extends 还可以限制范型继承，后面跟`?`允许 null 值 `class A<T extends Object>`
 
 ## 运算符重载
 
@@ -144,7 +144,6 @@ main() {
 
 `get` `set`修饰的方法可以拦截变量读取和修改
 
-
 ## 抽象类
 
 使用 `abstract` 修饰的 `class` 无法被实例化，只能被继承
@@ -153,12 +152,11 @@ main() {
 
 使用 `implements` 代替 `extends` 可以实现抽象类却不继承，且支持一次实现多个抽象类
 
-
 ## 混入
 
 使用 `with` 关键字并在其后跟上 Mixin 类的名字来使用 Mixin 模式
 
-类似于python多继承
+类似于 python 多继承
 
 ```dart
 class Maestro extends Person with Musical, Aggressive, Demented {
@@ -167,6 +165,7 @@ class Maestro extends Person with Musical, Aggressive, Demented {
 ```
 
 ## 拓展方法
+
 ```dart
 extension Dict<K, V> on Map<K, V>{
   List<MapEntry<K, V>> items(){

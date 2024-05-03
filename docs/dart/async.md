@@ -2,7 +2,7 @@
 
 ## Future
 
-相当于JavaScript中的Promise
+相当于 JavaScript 中的 Promise
 
 ### 声明异步函数
 
@@ -10,7 +10,8 @@
 String lookUpVersion() => '1.0.0';
 Future<String> lookUpVersion() async => '1.0.0';
 ```
-异步函数返回Future
+
+异步函数返回 Future
 
 ### 调用异步函数
 
@@ -19,6 +20,7 @@ void main() {
     lookUpVersion().then(print);
 }
 ```
+
 ```dart
 Future<void> main() async {
     Future<String> lookUpVersion() async => '1.0.0';
@@ -26,11 +28,12 @@ Future<void> main() async {
     lookUpVersion().then(print);
 }
 ```
+
 `Future.then().catchError()` 组合是 `try-catch` 的异步版本。
 
 ## Stream
 
-相当于Python中的AsyncGenerator
+相当于 Python 中的 AsyncGenerator
 
 ```dart
 Stream<int> asynchronousNaturalsTo(int n) async* {
@@ -44,6 +47,7 @@ Future<void> main() async {
     }
 }
 ```
+
 `Stream.listen().onDone().onError()` 类似于`Future.then()`
 
 除此之外还有`Stream.firstWhere()` `Stream.lastWhere()` 等
