@@ -54,6 +54,10 @@ export default defineConfig({
             { text: "函数", link: "/elixir/function" },
           ],
         },
+        {
+          text: "Phoenix",
+          items: [{ text: "创建项目", link: "/elixir/phoenix/" }],
+        },
       ],
     },
     nav: [

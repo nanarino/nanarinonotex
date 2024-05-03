@@ -4,7 +4,7 @@
 
 - [docs](https://hexdocs.pm/elixir/basic-types.html)
 - [elixirschool](https://elixirschool.com/zh-hans/lessons/basics/basics)
-- [phoenix](https://hexdocs.pm/phoenix/Phoenix.html)
+
 
 ## 注释
 
