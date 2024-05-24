@@ -12,7 +12,7 @@
   - 使用 `[ head | list ]` 插入头尾
   - 使用 `--` 过滤（只过滤相同的数量）
   - `hd()` `tl()` 获取头元素和尾列 （第一个是头元素 剩下的都在尾列）
-  - 使用 `[head | tail] = list` 解构头尾
+  - 使用 `[head | tail] = list` 解构头尾，头可以一次取出多个
 - tuple 字面量`{i,}` 不可变数组 内存连续
   - 第一个元素是 atom 时也称 Record
 - function
@@ -21,7 +21,7 @@
 
 ### Associative
 
-- Keyword 字面量：`[{k, v},]`，二元元组列表 用 ts 表达相当于 `Object.entries(obj)`
+- Keyword 字面量：`[{k, v},]`，二元元组列表 用 ts 表达相当于 `obj.entries()` key可重复
   - `{:key, v}` 可以写成 `key:v` 但得后置 如 `[{:hello, "world"}, foo: "bar"]`
 - Map 字面量：`%{k => v,}` 无序 键类型任意
   - `map.hello` 和 `map["hello"]` 获取值

@@ -2,7 +2,7 @@
 
 ## 匿名
 
-调用要加`.()`, 某些时候可省略括号
+调用要加`.()`
 
 ```elixir
 iex> sum = fn (a, b) -> a + b end
@@ -10,7 +10,7 @@ iex> sum.(2, 3)
 5
 ```
 
-支持erlang写法
+简写，但是必须要有参数
 
 ```elixir
 iex> sum = &(&1 + &2)
@@ -33,7 +33,7 @@ Handling result...
 
 ## 具名
 
-定义在模块内, 调用要加 `()`, 某些时候可省略括号
+定义在模块内, 调用可以加 `()`，也可以省略
 
 ```elixir
 defmodule Greeter do
@@ -46,13 +46,21 @@ iex> Greeter.hello("Sean")
 "Hello, Sean"
 ```
 
+分配给一个变量 调用方法同匿名函数
+
+```elixir
+hello = &Greeter.hello/1
+iex> hello.("Sean")
+"Hello, Sean"
+```
+
 模块内的具名函数直接写同名的即可多个签名根据参数匹配
 
 `defp` 定义私有函数
 
-`do` 之前支持 `when` 条件
+`do` 之前支持 `when` 条件 和 `case` 的子句一样
 
-`\\` 参数设置默认值 但由于签名匹配基本没必要
+`\\` 参数设置默认值 实际是生成 2 个同名具名函数 如：`foo/0` 和 `foo/1`
 
 ## 递归
 
@@ -85,6 +93,8 @@ end
 
 ## 管道
 
+具名函数的 `()` 推荐省略
+
 ```elixir
 foo(bar(:a))
 :a |> bar() |> foo()
@@ -102,6 +112,16 @@ iex> 1 |> sum.(2) |> sum.(3)
 6
 ```
 
+::: warning 高阶函数可能有歧义？
+
+不会，因为高阶函数只能返回匿名函数，而匿名函数调用时的 `.()` 不能省略
+
+隔壁的 [`gleam`](https://gleam.run/) 语言存在歧义：
+
+> It will first check to see if the left-hand value could be used as the first argument to the call. For example, `a |> b(1, 2)` would become `b(a, 1, 2)`. If not, it falls back to calling the result of the right-hand side as a function, e.g., `b(1, 2)(a)`
+
+:::
+
 ## 结构体
 
 ```elixir
@@ -118,7 +138,7 @@ iex> %Example.User{name: "Steve"}
 
 ## sigils
 
-类似 JavaScript 等语言的字符串模板的 tag，如 `` `<p>${var}</p>` ``
+类似 JavaScript 等语言的字符串模板的 tag，如 `` html`<p>${'你好'}</p>` ``
 
 或者 python 内置的 f-string，r-string，如 `f"{var}"`
 
