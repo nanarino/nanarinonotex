@@ -60,15 +60,25 @@ iex
 ------------------------------------------------------------------------
 ```
 
-按照上面提示的路径**手动**设置环境变量，下面脚本顺带也设置了 erlang 的环境变量：
+erlang 的环境变量已經自動設置，但是 elixir 還需要按照上面提示的路径**手动**设置：
 
 ```powershell
 $elixirPath = "C:\ProgramData\chocolatey\lib\Elixir\tools\bin"
-$erlangPath = "C:\Program Files\Erlang OTP\bin"
-$envPath = [System.Environment]::GetEnvironmentVariable("PATH", "Machine")
-$envPath += ";$elixirPath;$erlangPath"
-[System.Environment]::SetEnvironmentVariable("PATH", $envPath, "Machine")
+$env:Path = [System.Environment]::GetEnvironmentVariable("PATH", "Machine")
+$env:Path += ";$elixirPath"
+[System.Environment]::SetEnvironmentVariable("PATH", $env:Path, "Machine")
 ```
+
+後續你可以方便使用 choco 安裝 git vscode pgsql redis 等，
+
+### 安裝包
+
+安裝包安裝也是可以的：
+
+- [erlang](https://erlang.org/download/) 
+- [elixir](https://github.com/elixir-lang/elixir/releases)
+
+elixir依然需要設置環境變量
 
 ## 验证安装成功
 
@@ -106,7 +116,7 @@ vscode 会自己提示需要安装的插件，但在中国大陆需要配置 git
 
 在 iex 中使用 `recompile` 回车可以重新编译项目
 
-在 iex 中使用 `c` 可以编译某个ex文件
+在 iex 中使用 `c` 可以编译某个 ex 文件
 
 ### 依赖管理
 
