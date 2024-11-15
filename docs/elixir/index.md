@@ -60,7 +60,7 @@ iex
 ------------------------------------------------------------------------
 ```
 
-erlang 的环境变量已經自動設置，但是 elixir 還需要按照上面提示的路径**手动**设置：
+erlang 的环境变量已经自动设置，但是 elixir 还需要按照上面提示的路径**手动**设置：
 
 ```powershell
 $elixirPath = "C:\ProgramData\chocolatey\lib\Elixir\tools\bin"
@@ -69,16 +69,16 @@ $env:Path += ";$elixirPath"
 [System.Environment]::SetEnvironmentVariable("PATH", $env:Path, "Machine")
 ```
 
-後續你可以方便使用 choco 安裝 git vscode pgsql redis 等，
+后续你可以方便使用 choco 安裝 git vscode pgsql redis 等，
 
 ### 安裝包
 
 安裝包安裝也是可以的：
 
-- [erlang](https://erlang.org/download/) 
+- [erlang](https://erlang.org/download/)
 - [elixir](https://github.com/elixir-lang/elixir/releases)
 
-elixir依然需要設置環境變量
+elixir 依然需要设置环境变量
 
 ## 验证安装成功
 
@@ -107,6 +107,17 @@ Elixir 1.16.1 (compiled with Erlang/OTP 26)
 vscode 会自己提示需要安装的插件，但在中国大陆需要配置 git 代理
 
 ## 使用 mix 创建项目
+
+```powershell
+mix --help
+```
+
+::: danger `size_object: matchstate term not allowed`
+mix发布了使用不匹配的erlang/OTP版本所编译而导致
+降低elixir到上一个中版本即可 比如1.17.x会报错
+在GitHub上查询到1.16的最后一个版本后安装：
+`choco install elixir --allow-downgrade -version 1.16.3`
+:::
 
 ### 初始化空项目
 
